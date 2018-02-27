@@ -12,7 +12,8 @@ Mybatis条件动态添加插件，用于书写少量代码（一句话代码，�
 
 # 使用说明
 1. 在mybatis配置文件中，添加类似如下：
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+```xml
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath*:com/**/mapper/**/*.xml" />
 		<property name="plugins">
@@ -28,6 +29,7 @@ Mybatis条件动态添加插件，用于书写少量代码（一句话代码，�
 			</array>
 		</property>
 	</bean>
+```
 
 
 2. 代码使用示例：
@@ -35,6 +37,7 @@ Mybatis条件动态添加插件，用于书写少量代码（一句话代码，�
     studentMapper.selectAllList();
 
 # 依赖
+```xml
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
@@ -47,3 +50,4 @@ Mybatis条件动态添加插件，用于书写少量代码（一句话代码，�
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
         </dependency>
+```
